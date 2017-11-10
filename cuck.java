@@ -37,13 +37,13 @@ public class decbin {
 				  System.out.println("informe o CPF/CNPJ do(a) cadastrado(a): ");
 				  String cpfcnpj = in.nextLine();
 				  
-				  System.out.println("informe o endereÁo do(a) cadastrado(a): ");
+				  System.out.println("informe o endere√ßo do(a) cadastrado(a): ");
 				  String endereco = in.nextLine();
 				  
 				  System.out.println("informe o contato do(a) cadastrado(a): ");
 				  String contato = in.nextLine();
 					System.out.println(
-							"1 - Funcion·rio\n"
+							"1 - Funcion√°rio\n"
 							+ "2 - Cliente  \n"
 							+ "3 - Transportador\n"
 							
@@ -52,20 +52,20 @@ public class decbin {
 				in.nextLine();
 				if (tcad == 1) {
 					
-					System.out.print("informe o sal·rio do(a) cadastrado(a): ");
+					System.out.println("informe o sal√°rio do(a) cadastrado(a): ");
 					  double salario = in.nextDouble();
 					  in.nextLine();
-					  System.out.print("informe a conta do(a) cadastrado(a): ");
+					  System.out.println("informe a conta do(a) cadastrado(a): ");
 					  String conta = in.nextLine();
 					 
 					
 				}
 				if (tcad == 2) {}	
 				if (tcad == 3) {
-					System.out.print("informe a taxa (por tonelada) do transportador: ");
+					System.out.println("informe a taxa (por tonelada) do transportador: ");
 					  double taxa = in.nextDouble();
 					  in.nextLine();
-					  System.out.print("informe o tipo do transporte: ");
+					  System.out.println("informe o tipo do transporte: ");
 					  String tipotra = in.nextLine();
 					
 					
@@ -89,7 +89,7 @@ public class decbin {
 		
 		
 	}
-			else {  // exception("comando inv·lido")  }
+			else {  // exception("comando inv√°lido")  }
 		
 			}
 		
