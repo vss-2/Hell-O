@@ -15,7 +15,7 @@ public class edae {
         	this.nome = nome;
         	}
         	
-        	public String Getnome() {
+        	public String getNome() {
         		
         		return this.nome;
         	}
@@ -24,7 +24,7 @@ public class edae {
             	this.CPF = CPF;
             	}
             	
-            	public String GetCPF() {
+            	public String getCPF() {
             		
             		return this.CPF;
             	}
@@ -34,7 +34,7 @@ public class edae {
             		this.endereco = endereco;
             	}
             	
-            	public String Getendereco() {
+            	public String getEndereco() {
             		
             		return this.endereco;
             	}
@@ -44,7 +44,7 @@ public class edae {
                 	this.contato = contato;
                 	}
                 	
-                	public String Getcontato() {
+                	public String getContato() {
                 		
                 		return this.contato;
                 	}
@@ -62,14 +62,14 @@ public class edae {
         	public class Funcionario extends Pessoa {
         		private String produtividade;
         		private String salario;
-        		private Pessoa proximo;
+        		private Funcionario proximo;
         		
 
             	public void produtividade (String produtividade ) {
                 	this.produtividade = produtividade;
                 	}
                 	
-                	public String Getprodutividade() {
+                	public String getProdutividade() {
                 		
                 		return this.produtividade;
                 	}
@@ -78,7 +78,7 @@ public class edae {
                     	this.salario = salario;
                     	}
                     	
-                    	public String salario() {
+                    	public String getSalario() {
                     		
                     		return this.salario;
                     	}
@@ -93,18 +93,17 @@ public class edae {
 
         	public class Cliente extends Pessoa {
         		private String Totalcompras;
-        		private Pessoa proximo;
+        		private Cliente proximo;
         		
 
             	public void Totalcompras (String Totalcompras ) {
                 	this.Totalcompras = Totalcompras;
                 	}
                 	
-                	public String salario() {
-                		
-                		return this.Totalcompras;
-                	}
-        		
+                	public String getTotalcompras() {
+                    		
+                    		return this.Totalcompras;
+                    	}
         		
         		public Cliente () {
         			
