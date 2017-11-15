@@ -14,7 +14,7 @@ public class financas {
      	this.tipo = tipo;
      	}
      	
-     	public String Gettipo() {
+     	public String getTipo() {
      		
      		return this.tipo;
      	}
@@ -23,7 +23,7 @@ public class financas {
          	this.valor = valor;
          	}
          	
-         	public String Getvalor() {
+         	public String getValor() {
          		
          		return this.valor;
          	}
@@ -63,7 +63,7 @@ public class financas {
 	 	     	this.contadestinatario = contadestinatario;
 	 	     	}
 	 	     	
-	 	     	public String Gettipo() {
+	 	     	public String getContadestinatario() {
 	 	     		
 	 	     		return this.contadestinatario;
 	 	     	}
