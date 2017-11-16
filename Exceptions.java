@@ -1,7 +1,22 @@
+public class CorInvalidaException extends Exception {
 
-public class ContaNaoEncontradaException extends Exception {
+	public CorInvalidaException() {
+		super("Cor Invalida");
+	}
+}
+
+
+public class NomeInvalidoException extends Exception {
 
 	public ContaNaoEncontradaException() {
-		super("Conta nao encontrada");
+		super("Nome invalido");
+	}
+}
+
+
+public class VendaNaoConcluidaException extends Exception {
+
+	public VendaNaoConcluidaException() {
+		super("Venda Não Concluída");
 	}
 }
