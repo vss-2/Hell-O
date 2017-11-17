@@ -1,0 +1,89 @@
+public class code {
+
+	
+	public static void main(String[] args) {
+		
+		Scanner in = new Scanner (System.in);
+		
+		System.out.println("Informe a frase a ser decodificada:");
+		
+		String lul = in.nextLine();
+		String Replacelul = lul.toLowerCase().replaceAll(" ", "");
+		// System.out.println(Replacelul);
+		System.out.println/*batata*/("Declare o tamanho da matriz");
+
+		int tamatriz = in.nextInt();
+		int cont = 0;
+		System.out.println("Informe a Matriz");
+
+		int m = tamatriz;
+		int n = m;
+		double matriz [] [] = new double [m] [n];
+
+		for (int a = 0; a < m; a++) {
+			for (int b = 0; b < n; b++) {
+				matriz [a] [b] = in.nextInt();
+			}
+		}
+		double a, b,c;
+		
+		
+		if(tamatriz==3){
+		while(cont<tamatriz){
+		double [] letters = new double[tamatriz];
+		
+		 letters[0] = Replacelul.charAt(0+cont*3)-96;
+		letters[1] = Replacelul.charAt(1+cont*3)-96;
+		letters[2] = Replacelul.charAt(2+cont*3)-96;
+	cont++;
+	
+	
+	
+	 a = matriz [0] [0] * letters[0] + matriz [0] [1] * letters[1] + matriz [0] [2] * letters[2];
+	 b = matriz [1] [0] * letters[0] + matriz [0] [1] * letters[1] + matriz [0] [2] * letters[2];
+	 c = matriz [2] [0] * letters[0] + matriz [0] [1] * letters[1] + matriz [0] [2] * letters[2];
+	
+	
+		}
+		
+		}
+		
+		if(tamatriz==2){
+			while(cont<Replacelul.length()/2){
+			double [] letters = new double[tamatriz];
+			
+			 letters[0] = Replacelul.charAt(0+cont*2)-96;
+			letters[1] = Replacelul.charAt(1+cont*2)-96;
+			
+		cont++;
+		/*
+		System.out.println(matriz[0][0]+" "+matriz[0][1]);
+		System.out.println(matriz[1][0]+" "+matriz[1][1]);
+		*/
+		a = matriz [0] [0] * letters[0] + matriz [0] [1] * letters[1];
+		b = matriz [1] [0] * letters[0] + matriz [1] [1] * letters[1] ;
+		
+		if(a>26){
+			
+			a = a%26;
+		}
+		if(b>26){
+			
+			b = b%26;
+		}
+		
+		char chara= (char)(a+96);
+		char charb= (char)(b+96);
+		System.out.print(chara + ""+ charb+ " ");
+		
+			}
+			
+			}
+		
+	
+	
+	
+	}
+
+}
+
