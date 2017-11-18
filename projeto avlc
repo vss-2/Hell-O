@@ -63,11 +63,11 @@ public class code {
 		a = matriz [0] [0] * letters[0] + matriz [0] [1] * letters[1];
 		b = matriz [1] [0] * letters[0] + matriz [1] [1] * letters[1] ;
 		
-		if(a>26){
+		if(a>=26){
 			
 			a = a%26;
 		}
-		if(b>26){
+		if(b>=26){
 			
 			b = b%26;
 		}
