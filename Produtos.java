@@ -1,3 +1,5 @@
+package classes;
+
 public class Produtos {
 	private String Preco;
 	private String Qualidade;
@@ -9,7 +11,7 @@ public class Produtos {
 		this.Marca = null;
 	}
 
-	public void Preco (String Preco) {
+	public void Preco(String Preco) {
 		this.Preco = Preco;
 	}
 
@@ -17,7 +19,7 @@ public class Produtos {
 		return this.Preco;
 	}
 
-	public void Qualidade (String Qualidade) {
+	public void Qualidade(String Qualidade) {
 		this.Qualidade = Qualidade;
 	}
 
@@ -25,7 +27,7 @@ public class Produtos {
 		return this.Qualidade;
 	}
 
-	public void Marca (String Marca) {
+	public void Marca(String Marca) {
 		this.Marca = Marca;
 	}
 
@@ -44,45 +46,53 @@ public class Produtos {
 			this.Tamanho = null;
 		}
 
-		public void Time (String Time) {
+		public void Time(String Time) {
 			this.Time = Time;
-		} 
-		public String Time () {
+		}
+
+		public String Time() {
 			return this.Time;
 		}
-		public void Versao (String Versao) {
+
+		public void Versao(String Versao) {
 			this.Versao = Versao;
 		}
+
 		public String Versao() {
 			return this.Versao;
 		}
-		public void Tamanho (String Tamanho) {
+
+		public void Tamanho(String Tamanho) {
 			this.Tamanho = Tamanho;
 		}
-		public String Tamanho () {
+
+		public String Tamanho() {
 			return this.Tamanho;
 		}
 
-		//depois converter pra numero, e se o cara jogar uma letra
-		//da um throws not a number exception
+		// depois converter pra numero, e se o cara jogar uma letra
+		// da um throws not a number exception
 
 	}
+
 	public class Calcados extends Produtos {
 		private String Cor;
 		private String Tamanho;
 
-		public void Cor (String Cor) {
+		public void Cor(String Cor) {
 			this.Cor = Cor;
 		}
+
 		public String getCor() {
 			return this.Cor;
 		}
-		public void Tamanho (String Tamanho) {
+
+		public void Tamanho(String Tamanho) {
 			this.Tamanho = Tamanho;
 		}
+
 		public String getTamanho() {
 			return this.Tamanho;
 		}
 	}
 }
-
