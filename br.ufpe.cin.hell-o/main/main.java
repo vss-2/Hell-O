@@ -38,7 +38,7 @@ public class main{
 						System.out.println("Informe a conta do(a) funcionario(a):");
 						String conta = in.nextLine();
 						//inserirPessoas
-						//fachada.pessoas(nome, cpfcnpj, endereco, contato, salario, conta, "", "", "");
+						fachada.pessoas(nome, cpfcnpj, endereco, contato, salario, conta, "", "", "");
 					} else if (n == 2) {
 						System.out.println("Informe o CPF do(a) funcionario(a):");
 						String cpfcnpj = in.nextLine();
@@ -69,7 +69,7 @@ public class main{
 						System.out.println("Informe o cartao do(a) cliente:");
 						String cartaocredito = in.nextLine();
 						//inserirPessoas
-						//fachada.pessoas(nome, cpfcnpj, endereco, contato, "", "", cartaocredito, "", "");
+						fachada.pessoas(nome, cpfcnpj, endereco, contato, "", "", cartaocredito, "", "");
 					} else if (n == 2) {
 						System.out.println("Informe o CPF do(a) cliente:");
 						String cpfcnpj = in.nextLine();
@@ -102,7 +102,7 @@ public class main{
 						System.out.println("Informe a tipo do transporte:");
 						String tipo = in.nextLine();
 						//inserirPessoas
-						//fachada.pessoas(nome, cpfcnpj, endereco, contato, "", "", "", taxa, tipo);
+						fachada.pessoas(nome, cpfcnpj, endereco, contato, "", "", "", taxa, tipo);
 					} else if (n == 2) {
 						System.out.println("Informe o CNPJ do transporte:");
 						String cpfcnpj = in.nextLine();
@@ -126,14 +126,14 @@ public class main{
 						System.out.println("Informe o valor do pagamento:");
 						String valor = in.nextLine();
 						//inserirFinancas
-						//fachada.financas(tipof, valor, 666-6, "");
+						fachada.financas(tipof, valor, 666-6, "");
 					} else if (n == 2) {
 						System.out.println("Informe o tipo de pagamento:");
 						String tipof = in.nextLine();
 						//procurarFinancas(
-						//fachada.financas(tipof)(retorna a soma de todas as receitas daquele tipo);
+						fachada.financas(tipof)(retorna a soma de todas as receitas daquele tipo);
 					} else if (n == 3) {
-						//funcao invalida
+						throw new ComandoInvalidoException();
 					} else if (n == 4) {
 						throw new ComandoInvalidoException();
 					}
@@ -147,12 +147,12 @@ public class main{
 						System.out.println("Informe a conta do destinatario:");
 						String contadestinatario = in.nextLine();
 						//inserirFinancas
-						//fachada.financas(tipof, valor, "", contadestinatario);
+						fachada.financas(tipof, valor, "", contadestinatario);
 					} else if (n == 2) {
 						System.out.println("Informe a conta do destinatario:");
 						String contadestinatario = in.nextLine();
 						//procurarFinancas
-						//fachada.financas(contadestinatario)(retorna a soma de todas as despesas pagas para aquela conta);
+						fachada.financas(contadestinatario)(retorna a soma de todas as despesas pagas para aquela conta);
 					} else if (n == 3) {
 						throw new ComandoInvalidoException();
 					} else if (n == 4) {
@@ -172,24 +172,18 @@ public class main{
 						System.out.println("Informe o time do produto:");
 						String time = in.nextLine();
 						//inserirProdutos
-						//fachada.produtos(nomep, preco, marca, tamanho, "", time);
+						fachada.produtos(nomep, preco, marca, tamanho, "", time);
 					} else if (n == 2) {
 						System.out.println("Informe o nome do produto:");
 						String nomep = in.nextLine();
-						System.out.println("Informe a marca do produto:");
+							System.out.println("Informe a marca do produto:");
 						String marca = in.nextLine();
 						System.out.println("Informe o tamanho do produto:");
 						String tamanho = in.nextLine();
 						System.out.println("Informe o time do produto:");
 						String time = in.nextLine();
 						//procurarProdutos
-						//fachada.produtos(nomep, marca, tamanho, "", time)(retorna true ou false);
-						if (tiverproduto == true) {
-							System.out.println("Temos o produto em estoque.");
-						} else {
-							System.out.println("Produto fora de estoque.");
-							throw new ForadeEstoqueException();
-						}		
+						fachada.produtos(nomep, marca, tamanho, "", time);
 					} else if (n == 3) {
 						System.out.println("Informe o nome do produto:");
 						String nomep = in.nextLine();
@@ -202,7 +196,7 @@ public class main{
 						System.out.println("Informe o novo preco do produto:");
 						String preco = in.nextLine();
 						//atualizarProdutos
-						//fachada.produtos(nomep, marca, tamanho, "", time, preco);
+						fachada.produtos(nomep, marca, tamanho, "", time, preco);
 					} else if (n == 4) {
 						System.out.println("Informe o nome do produto:");
 						String nomep = in.nextLine();
@@ -215,7 +209,7 @@ public class main{
 						System.out.println("Informe o time do produto:");
 						String time = in.nextLine();
 						//removerProdutos(VENDA);
-						//fachada.produtos(nomep, preco, marca, tamanho, "", time);
+						fachada.produtos(nomep, preco, marca, tamanho, "", time);
 					}
 					break;
 				case 7:
@@ -231,7 +225,7 @@ public class main{
 						System.out.println("Informe a cor do produto:");
 						String cor = in.nextLine();
 						//inserirProdutos
-						//fachada.produtos(nomep, preco, marca, tamanho, cor, "");
+						fachada.produtos(nomep, preco, marca, tamanho, cor, "");
 					} else if (n == 2) {
 						System.out.println("Informe o nome do produto:");
 						String nomep = in.nextLine();
@@ -242,13 +236,7 @@ public class main{
 						System.out.println("Informe a cor do produto:");
 						String cor = in.nextLine();
 						//procurarProdutos
-						//fachada.produtos(nomep, marca, tamanho, cor, "")(retorna true ou false);
-						if (tiverproduto == true) {
-							System.out.println("Temos o produto em estoque.");
-						} else {
-							System.out.println("Produto fora de estoque.");
-							throw new ForadeEstoqueException();
-						}
+						fachada.produtos(nomep, marca, tamanho, cor, "");
 					} else if (n == 3) {
 						System.out.println("Informe o nome do produto:");
 						String nomep = in.nextLine();
@@ -261,7 +249,7 @@ public class main{
 						System.out.println("Informe o novo preco do produto:");
 						String preco = in.nextLine();
 						//atualizarProdutos
-						//fachada.produtos(nomep, marca, tamanho, cor, "", preco);
+						fachada.produtos(nomep, marca, tamanho, cor, "", preco);
 					} else if (n == 4) {
 						System.out.println("Informe o nome do produto:");
 						String nomep = in.nextLine();
@@ -274,7 +262,7 @@ public class main{
 						System.out.println("Informe a cor do produto:");
 						String cor = in.nextLine();
 						//removerProdutos(VENDA);
-						//fachada.produtos(nomep, preco, marca, tamanho, cor, "");
+						fachada.produtos(nomep, preco, marca, tamanho, cor, "");
 					}
 					break;
 				default:
