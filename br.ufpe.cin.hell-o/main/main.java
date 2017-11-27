@@ -9,6 +9,7 @@ public class main{
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		int ID, n;
+		//Nessa parte do codigo, descobrimos exatamente o que o consumidor quer:
 		while (in.hasNext()) {
 			System.out.println("1 - Funcionario\n2 - Cliente\n3 - Transporte\n4 - Receita\n5 - Despesa\n6 - Roupa\n7 - Calcado");
 			ID = in.nextInt();
