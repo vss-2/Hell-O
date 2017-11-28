@@ -1,11 +1,11 @@
 package main;
 
 import java.util.*;
-import Fachada.Fachada;
+import fachada.Fachada;
 import exceptions.*;
 import cadastramento.*;
 import interfaces.*;
-import negocios.*;
+import negocio.*;
 import repositorio.*;
 
 public class main{
@@ -179,7 +179,7 @@ public class main{
 						System.out.println("Informe o time do produto:");
 						String time = in.nextLine();
 						//inserirProdutos
-						CadastroProdutos.novoProduto(nomep, preco, marca, tamanho, "", time);
+						CadastroProdutos.novoRoupa(nomep, preco, marca, tamanho, "", time);
 					} else if (n == 2) {
 						System.out.println("Informe o nome do produto:");
 						String nomep = in.nextLine();
@@ -190,7 +190,7 @@ public class main{
 						System.out.println("Informe o time do produto:");
 						String time = in.nextLine();
 						//procurarProdutos
-						CadastroProdutos.procurarProduto(nomep, marca, tamanho, "", time);
+						CadastroProdutos.procurarRoupa(nomep, marca, tamanho, "", time);
 					} else if (n == 3) {
 						System.out.println("Informe o nome do produto:");
 						String nomep = in.nextLine();
@@ -203,7 +203,7 @@ public class main{
 						System.out.println("Informe o novo preco do produto:");
 						String preco = in.nextLine();
 						//atualizarProdutos
-						CadastroProdutos.atualizarProduto(nomep, marca, tamanho, "", time, preco);
+						CadastroProdutos.atualizarRoupa(nomep, marca, tamanho, "", time, preco);
 					} else if (n == 4) {
 						System.out.println("Informe o nome do produto:");
 						String nomep = in.nextLine();
@@ -216,7 +216,7 @@ public class main{
 						System.out.println("Informe o time do produto:");
 						String time = in.nextLine();
 						//removerProdutos(VENDA);
-						CadastroProdutos.removerProduto(nomep, preco, marca, tamanho, "", time);
+						CadastroProdutos.removerRoupa(nomep, preco, marca, tamanho, "", time);
 					}
 					break;
 				case 7:
@@ -232,7 +232,7 @@ public class main{
 						System.out.println("Informe a cor do produto:");
 						String cor = in.nextLine();
 						//inserirProdutos
-						CadastroProdutos.novoProduto(nomep, preco, marca, tamanho, cor, "");
+						CadastroProdutos.novoCalcado(nomep, preco, marca, tamanho, cor, "");
 					} else if (n == 2) {
 						System.out.println("Informe o nome do produto:");
 						String nomep = in.nextLine();
@@ -243,7 +243,7 @@ public class main{
 						System.out.println("Informe a cor do produto:");
 						String cor = in.nextLine();
 						//procurarProdutos
-						CadastroProdutos.procurarProduto(nomep, marca, tamanho, cor, "");
+						CadastroProdutos.procurarCalcado(nomep, marca, tamanho, cor, "");
 					} else if (n == 3) {
 						System.out.println("Informe o nome do produto:");
 						String nomep = in.nextLine();
@@ -256,7 +256,7 @@ public class main{
 						System.out.println("Informe o novo preco do produto:");
 						String preco = in.nextLine();
 						//atualizarProdutos
-						CadastroProdutos.atualizarProduto(nomep, marca, tamanho, cor, "", preco);
+						CadastroProdutos.atualizarCalcado(nomep, marca, tamanho, cor, "", preco);
 					} else if (n == 4) {
 						System.out.println("Informe o nome do produto:");
 						String nomep = in.nextLine();
@@ -269,7 +269,7 @@ public class main{
 						System.out.println("Informe a cor do produto:");
 						String cor = in.nextLine();
 						//removerProdutos(VENDA);
-						//CadastroProdutos.remover(nomep, preco, marca, tamanho, cor, "");
+						CadastroProdutos.removerCalcado(nomep, preco, marca, tamanho, cor, "");
 					}
 					break;
 				default:
