@@ -13,7 +13,7 @@ public class main{
 	public static void main(String[] args) throws Exception {
 		Scanner in = new Scanner(System.in);
 		
-		boolean a;int ID, n = 0;
+		boolean a=false;;int ID, n = 0;
 		//Nessa parte do codigo, descobrimos exatamente o que o consumidor quer:
 		while (0<1) {
 			System.out.println("1 - Funcionario\n2 - Cliente\n3 - Transporte\n4 - Receita\n5 - Despesa\n6 - Roupa\n7 - Calcado");
@@ -70,7 +70,7 @@ public class main{
 						System.out.println("Informe o CPF do(a) cliente");
 						String cpfcnpj = in.nextLine();
 						 a = repositorioPessoasArray.procurarPessoa(cpfcnpj);
-						 if(a=false) {throw new CPFJaCadastradoException();}
+						 if(a==true) {throw new CPFJaCadastradoException();}
 						System.out.println("Informe o endereco do(a) cliente:");
 						String endereco = in.nextLine();
 						System.out.println("Informe o contato do(a) cliente:");
@@ -82,7 +82,7 @@ public class main{
 					} else if (n == 2) {
 						System.out.println("Informe o CPF do(a) cliente:");
 						String cpfcnpj = in.nextLine();
-						 if(a=true) {System.out.println("Situação Regular");}
+						 if(a==true) {System.out.println("Situação Regular");}
 						 else {System.out.println("CPF não cadastrado");}
 						//procurarPessoas(retorna nome e conta);
 					} else if (n == 3) {
@@ -106,7 +106,7 @@ public class main{
 						System.out.println("Informe o CNPJ do transporte:");
 						String cpfcnpj = in.nextLine();
 						 a = repositorioPessoasArray.procurarPessoa(cpfcnpj);
-						 if(a=true) {throw new CPFJaCadastradoException();}
+						 if(a==true) {throw new CPFJaCadastradoException();}
 						//validarCNPJ
 						System.out.println("Informe o endereco do transporte:");
 						String endereco = in.nextLine();
