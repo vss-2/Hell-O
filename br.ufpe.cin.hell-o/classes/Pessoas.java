@@ -53,7 +53,51 @@ public class Pessoas {
 		}
 	}
 
-	public class Funcionario extends Pessoa {
+	public class Cliente extends Pessoa {
+		private String creditcard;
+		
+		private Cliente proximo;
+
+		public void creditcard(String creditcard) {
+			this.creditcard = creditcard;
+		}
+
+		public String getCreditcard() {
+
+			return this.creditcard;
+		}
+		
+		
+		
+		public class Transporte extends Pessoa {
+		private String taxa;
+		private String tipo;
+		private Transporte proximo;
+
+		public void taxa(String taxa) {
+			this.taxa = taxa;
+		}
+
+		public String getTaxa() {
+
+			return this.taxa;
+		}
+			
+	 	public void tipo(String tipo) {
+			this.tipo = tipo;
+		}
+
+		public String getTipo() {
+
+			return this.tipo;
+		}
+			
+			
+			
+			
+			
+			
+			public class Funcionario extends Pessoa {
 		private String produtividade;
 		private String salario;
 		private Funcionario proximo;
