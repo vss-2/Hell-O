@@ -33,14 +33,19 @@ public class Financas {
 
 	public class Lucro extends financass {
 
+		private String arrecadacao;
 		private Lucro proximo;
 
-		public Lucro() {
-
-			this.proximo = null;
+		public void arrecadacao(String arrecadacao) {
+			this.arrecadacao = arrecadacao;
 		}
 
-	}
+		public String getArrecadacao() {
+
+			return this.arrecadacao;
+		}
+
+		
 
 	public class despesa extends financass {
 
@@ -56,11 +61,7 @@ public class Financas {
 			return this.contadestinatario;
 		}
 
-		public despesa() {
-
-			this.contadestinatario = null;
-			this.proximo = null;
-		}
+		
 
 	}
 
