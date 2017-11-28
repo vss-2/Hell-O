@@ -1,10 +1,11 @@
 package repositorio;
-import fachada.Fachada;
+import Fachada.Fachada;
+import main.main;
+
 public class repositorioPessoas {
 
-	String Pessoas[][] = new String[100000][10];
 
-	Lista Pessoas = new Lista();
+	//Lista Pessoas = new Lista();
 
 	public static class Lista {
 		private String Nome;
@@ -18,6 +19,33 @@ public class repositorioPessoas {
 		private String Tipo;
 		private String Taxa;
 		
+		public String getNome() {
+			return this.Nome;
+		}
+		
+		public String getCpf() {
+			return this.Cpf;
+		}
+		
+		public String getContato() {
+			return this.Contato;
+		}
+		
+		public String getProdutividade() {
+			return this.Produtividade;
+		}
+		
+		public String getTotalcompras() {
+			return this.Totalcompras;
+		}
+		
+		public String getTipo() {
+			return this.Tipo;
+		}
+		
+		public String getTaxa() {
+			return this.Taxa;
+		}
 		Lista geral = new Lista();
 		Lista nome;
 		Lista cpf;
@@ -41,39 +69,8 @@ public class repositorioPessoas {
 			this.totalcompras = null;
 			this.tipo = null;
 			this.taxa = null;
+			
 		}
 		
-		public void inserir (String Valor) {
-			if (this.nome == null) {
-			}
-		}
-	}
-	
-	public String getNome() {
-		return this.nome;
-	}
-
-	public String getCpf() {
-		return this.cpf;
-	}
-
-	public String getContato() {
-		return this.contato;
-	}
-
-	public String getProdutividade() {
-		return this.produtividade;
-	}
-
-	public String getTotalcompras() {
-		return this.totalcompras;
-	}
-
-	public String getTipo() {
-		return this.tipo;
-	}
-
-	public String getTaxa() {
-		return this.taxa;
 	}
 }

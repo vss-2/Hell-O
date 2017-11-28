@@ -1,8 +1,10 @@
 package repositorio;
+import Fachada.Fachada;
+import main.main;
 
 public class repositorioProdutos {
 
-	String Produtos [] [] = new String [100000][8];
+	
 	
 	public static class Lista{
 		private String preco;
@@ -13,9 +15,8 @@ public class repositorioProdutos {
 		private String time;
 		private String versao;
 		private String tamanhoR;
-	}
-	
-	public String getPreco () {
+		
+		public String getPreco () {
 		return this.preco;
 	}
 	public String getQualidade() {
@@ -28,7 +29,7 @@ public class repositorioProdutos {
 		return this.cor;
 	}
 	public String getTamanhoC(){
-		return this.tamanho;
+		return this.tamanhoC;
 	}
 	public String getTime() {
 		return this.time;
@@ -39,4 +40,7 @@ public class repositorioProdutos {
 	public String getTamanhoR() {
 		return this.tamanhoR;
 	}
+	}
+	
+	
 }
