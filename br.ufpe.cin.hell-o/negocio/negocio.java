@@ -1,6 +1,13 @@
+package negocio;
 import main.main;
-public class negocio {
+import java.util.*;
+import exceptions.*;
+import cadastramento.*;
+import interfaces.*;
+import negocio.*;
 
+public class negocio {
+/*
 	private Pessoas Cliente;
 	private Pessoas Funcionario;
 	private Pessoas Transportador;
@@ -29,5 +36,5 @@ public class negocio {
 	public void pagarContas() {
 		Despesa = new Financa();
 	}
-	
+	*/
 }

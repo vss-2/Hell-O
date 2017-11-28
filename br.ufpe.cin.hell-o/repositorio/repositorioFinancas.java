@@ -1,32 +1,52 @@
 package repositorio;
 
 import java.util.*;
-import fachada.Fachada;
 import exceptions.*;
 import cadastramento.*;
 import interfaces.*;
 import negocio.*;
 
 public class repositorioFinancas {
-	
-	public static class Lista {
-		private String tipo;
-		private String valor;
-		private String cadernetacontas;
-		private String contadestinatario;
-		
-		public String getTipo () {
-			return this.tipo;
+    private Integer id;
+	private String tipof;
+	private String valor;
+	private String cadernetacontas;
+	private String contadestinatario;
+	private repositorioFinancas proximo;  
+	  
+    public repositorioFinancas() {
+		this.id = null;
+        this.tipof = null;  
+		this.valor = null;
+		this.cadernetacontas = null;
+		this.contadestinatario = null;
+		this.proximo = null;	
+    }
+	   
+    public void inserirFinancas( String tipof, String valor, String cadernetacontas, String contadestinatario) {
+        if (this.valor == null) {
+            this.id = id;
+			this.tipof = tipof;  
+			this.valor = valor;
+			this.cadernetacontas = cadernetacontas;
+			this.contadestinatario = contadestinatario;
+            this.proximo = new repositorioFinancas();
+        } else {
+            this.proximo.inserirFinancas(tipof, valor, cadernetacontas, contadestinatario);
+        }
+    }
+
+	public String repositorioFinancas(String cpf) {
+		String r = "";
+		if (this.valor != null) {
+			if (this.valor.equals(valor)) {
+				r = this.valor;	
+			} else {
+				this.proximo.repositorioFinancas(cpf);
+			}	
+		} else {
+			//CPF nao encontrado	
 		}
-		public String getValor () {
-			return this.valor;
-		}
-		public String getCadernetacontas () {
-			return this.cadernetacontas;
-		}
-		public String Contadestinatario() {
-			return this.contadestinatario;
-		}
+		return r;
 	}
-	
-}
+  }

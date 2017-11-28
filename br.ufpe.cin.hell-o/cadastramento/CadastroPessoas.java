@@ -1,10 +1,9 @@
 package cadastramento;
 
 import java.util.*;
-import Fachada.Fachada;
 import exceptions.*;
 import interfaces.*;
-import negocios.*;
+import negocio.*;
 import repositorio.*;
 
 public class CadastroPessoas {

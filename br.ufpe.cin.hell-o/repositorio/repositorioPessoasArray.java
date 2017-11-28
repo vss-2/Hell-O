@@ -1,7 +1,6 @@
 package repositorio;
 
 import java.util.*;
-import fachada.Fachada;
 import exceptions.*;
 import cadastramento.*;
 import interfaces.*;
@@ -53,4 +52,50 @@ public class repositorioPessoasArray {
 		Pessoas[xp][8] = tipo;
 		xp++;
 	}
+	
+	public static boolean procurarPessoa(String cpfcnpj) {
+		boolean boo = false;
+		int x3 = 0;
+		while (Pessoas[x3][1] != null) {
+			if(Pessoas[x3][1].equals(cpfcnpj)) {
+				boo = true;
+			}else {
+				boo = false;
+			}
+			x3++;
+		}
+		return boo;
+	}	
+	
+	public static void removerPessoa (String cpfcnpj) {
+		int x3 = 0;
+		while (Pessoas[x3][2] != null) {
+			if(Pessoas[xp][x3].equals(cpfcnpj)) {
+				Pessoas[xp][0] = "removido";
+				Pessoas[xp][1] = "removido";
+				Pessoas[xp][2] = "removido";
+				Pessoas[xp][3] = "removido";
+				Pessoas[xp][4] = "removido";
+				Pessoas[xp][5] = "removido";
+				Pessoas[xp][6] = "removido";
+				Pessoas[xp][7] = "removido";
+				Pessoas[xp][8] = "removido";
+			}
+			x3++;
+		}
+	}
+	
+	public static void atualizarPessoa (String cpfcnpj, String cartaocredito) {
+		int x4 = 0;
+		while (Pessoas[x4][1] != null) {
+			if(Pessoas[x4][1].equals(cpfcnpj)) {
+				
+				
+				Pessoas[x4][6] = cartaocredito;
+				
+				x4++;
+			}
+			
+	}
+}
 }

@@ -1,5 +1,12 @@
 package classes;
 
+import java.util.*;
+import exceptions.*;
+import cadastramento.*;
+import interfaces.*;
+import negocio.*;
+import repositorio.*;
+
 public class Pessoas {
 
 	abstract static class Pessoa {
@@ -112,3 +119,4 @@ public class Pessoas {
 		}
 	}
 }
+	}}

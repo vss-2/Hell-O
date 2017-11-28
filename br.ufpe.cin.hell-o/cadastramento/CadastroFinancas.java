@@ -1,10 +1,9 @@
 package cadastramento;
 
 import java.util.*;
-import Fachada.Fachada;
 import exceptions.*;
 import interfaces.*;
-import negocios.*;
+import negocio.*;
 import repositorio.*;
 
 public class CadastroFinancas {
@@ -12,6 +11,7 @@ public class CadastroFinancas {
 	public static void novoLucro(String tipof, String valor, int i, String string) {
 		String i2 = i + "";
 			repositorioFinancasArray.preencherLucro(tipof, valor, i2, string);
+			
 		}
 
 	public static void procurarLucro(String tipof) {

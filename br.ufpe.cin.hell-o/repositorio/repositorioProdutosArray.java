@@ -1,7 +1,6 @@
 package repositorio;
 
 import java.util.*;
-import fachada.Fachada;
 import exceptions.*;
 import cadastramento.*;
 import interfaces.*;

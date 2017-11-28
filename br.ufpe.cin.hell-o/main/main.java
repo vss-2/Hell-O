@@ -1,20 +1,21 @@
 package main;
 
 import java.util.*;
-import fachada.Fachada;
 import exceptions.*;
 import cadastramento.*;
+import classes.Pessoas;
 import interfaces.*;
 import negocio.*;
 import repositorio.*;
-
+import repositorio.*;
 public class main{
 
 	public static void main(String[] args) throws Exception {
 		Scanner in = new Scanner(System.in);
-		int ID, n = 0;
+		
+		boolean a;int ID, n = 0;
 		//Nessa parte do codigo, descobrimos exatamente o que o consumidor quer:
-		while (in.hasNext()) {
+		while (0<1) {
 			System.out.println("1 - Funcionario\n2 - Cliente\n3 - Transporte\n4 - Receita\n5 - Despesa\n6 - Roupa\n7 - Calcado");
 			ID = in.nextInt();
 			in.nextLine();
@@ -34,6 +35,10 @@ public class main{
 						System.out.println("Informe o CPF do(a) funcionario(a):");
 						String cpfcnpj = in.nextLine();
 						//validarCPF
+						 a = repositorioPessoasArray.procurarPessoa(cpfcnpj);
+						 if(a==true) {
+							 throw new CPFJaCadastradoException();
+						 }
 						System.out.println("Informe o endereco do(a) funcionario(a):");
 						String endereco = in.nextLine();
 						System.out.println("Informe o salario do(a) funcionario(a):");
@@ -44,11 +49,8 @@ public class main{
 						String conta = in.nextLine();
 						//inserirPessoas
 						CadastroPessoas.novoFuncionario(nome, cpfcnpj, endereco, contato, salario, conta, "", "", "");
-					} else if (n == 2) {
-						System.out.println("Informe o CPF do(a) funcionario(a):");
-						String cpfcnpj = in.nextLine();
-						//procurarPessoas(retorna nome e conta);
-					} else if  (n == 3) {
+					} 
+					 else if  (n == 2) {
 						System.out.println("Informe o CPF do(a) funcionario(a):");
 						String cpfcnpj = in.nextLine();
 						System.out.println("Informe a conta do(a) funcionario(a):");
@@ -61,12 +63,14 @@ public class main{
 					}	
 					break;
 				case 2:	
+					
 					if (n == 1) {
 						System.out.println("Informe o nome do(a) cliente:");
 						String nome = in.nextLine();
 						System.out.println("Informe o CPF do(a) cliente");
 						String cpfcnpj = in.nextLine();
-						//validarCPF
+						 a = repositorioPessoasArray.procurarPessoa(cpfcnpj);
+						 if(a=false) {throw new CPFJaCadastradoException();}
 						System.out.println("Informe o endereco do(a) cliente:");
 						String endereco = in.nextLine();
 						System.out.println("Informe o contato do(a) cliente:");
@@ -78,16 +82,20 @@ public class main{
 					} else if (n == 2) {
 						System.out.println("Informe o CPF do(a) cliente:");
 						String cpfcnpj = in.nextLine();
+						 if(a=true) {System.out.println("Situação Regular");}
+						 else {System.out.println("CPF não cadastrado");}
 						//procurarPessoas(retorna nome e conta);
 					} else if (n == 3) {
 						System.out.println("Informe o CPF do(a) cliente:");
 						String cpfcnpj = in.nextLine();
 						System.out.println("Informe o cartao do(a) cliente:");
 						String cartaocredito = in.nextLine();
+						repositorioPessoasArray.atualizarPessoa(cpfcnpj,cartaocredito);
 						//atualizarPessoas
 					} else if (n == 4) {
 						System.out.println("Informe o CPF do(a) cliente:");
 						String cpfcnpj = in.nextLine();
+						repositorioPessoasArray.removerPessoa(cpfcnpj);
 						//removerPessoas
 					}	
 					break;
@@ -97,6 +105,8 @@ public class main{
 						String nome = in.nextLine();
 						System.out.println("Informe o CNPJ do transporte:");
 						String cpfcnpj = in.nextLine();
+						 a = repositorioPessoasArray.procurarPessoa(cpfcnpj);
+						 if(a=true) {throw new CPFJaCadastradoException();}
 						//validarCNPJ
 						System.out.println("Informe o endereco do transporte:");
 						String endereco = in.nextLine();
@@ -117,11 +127,13 @@ public class main{
 						String cpfcnpj = in.nextLine();
 						System.out.println("Informe a taxa do transporte:");
 						String taxa = in.nextLine();
+						repositorioPessoasArray.atualizarPessoa(cpfcnpj, taxa);
 						//atualizarPessoas
 					} else if (n == 4) {
 						System.out.println("Informe o CNPJ do transporte");
 						String cpfcnpj = in.nextLine();
 						//removerPessoas
+						repositorioPessoasArray.removerPessoa(cpfcnpj);
 					}
 					break;
 				case 4:
@@ -277,6 +289,6 @@ public class main{
 					//break;
 			}
 		}
-		System.out.println("Para sua seguranca, nosso sistema salva as informacoes em arrays e listas ordenadas, um sera backup do outro.");
+		//System.out.println("Para sua seguranca, nosso sistema salva as informacoes em arrays e listas ordenadas, um sera backup do outro.");
 	}
 }	

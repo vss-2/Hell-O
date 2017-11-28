@@ -1,5 +1,12 @@
 package classes;
 
+import java.util.*;
+import exceptions.*;
+import cadastramento.*;
+import interfaces.*;
+import negocio.*;
+import repositorio.*;
+
 public class Produtos {
 	
 	private String Preco;
@@ -17,7 +24,7 @@ public class Produtos {
 	}
 
 	public void Tamanho(String Tamanho) {
-		this.Qualidade = Tamanho;
+		this.Tamanho = Tamanho;
 	}
 
 	public String getTamanho() {
