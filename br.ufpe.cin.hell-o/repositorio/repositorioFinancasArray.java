@@ -1,11 +1,11 @@
 package repositorio;
 
 import java.util.*;
-import Fachada.Fachada;
+import fachada.Fachada;
 import exceptions.*;
 import cadastramento.*;
 import interfaces.*;
-import negocios.*;
+import negocio.*;
 
 public class repositorioFinancasArray {
 
@@ -43,10 +43,9 @@ public class repositorioFinancasArray {
 	public static boolean procurarPagamento(String contadestinatario) {
 		int z = 0;
 		boolean z1 = false;
-		while (Financas[x][0] != null) {
+		while (Financas[z][0] != null) {
 			if (Financas[z][0] == contadestinatario) {
 				z1 = true;
-			} else {
 			}
 		}
 		return z1;
